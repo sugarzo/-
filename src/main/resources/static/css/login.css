@@ -1,0 +1,26 @@
+body{
+    background:url("/image/index.jpg") no-repeat;
+    text-align: center;
+    background-size:cover;
+}
+.loginform{
+    background-color: #efdada;
+    border-radius: 20px;
+    padding: auto;
+    margin: 20px 35%;
+    opacity:0.9;
+    top:35%;
+    height: 40%;
+}
+.text{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 25px 10px;
+}
+.login-button{
+    background-color: #77a6e8;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin:20px;
+}

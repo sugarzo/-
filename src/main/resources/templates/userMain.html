@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>电子商务网站</title>
+	<!--引入css-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+ 	<link rel="stylesheet" href="/css/reset.css">
+ 	<link rel="stylesheet" href="/css/table.css">
+ 	<link rel="stylesheet" href="/css/public.css">
+ 	<link rel="stylesheet" href="/css/btn.css">
+ 	<link rel="stylesheet" href="/css/floatBox.css">
+ 	<script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/jquery.qrcode.min.js"></script>
+    <script src="/js/user.js"></script>
+	<!--引入JavaScript-->
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+	<!--初始化代码-->
+	<script>
+     $(document).ready(function() {
+           $('#example').DataTable({
+        	     "bFilter": false, 
+                 "pagingType":   "simple",
+                	 "sRowSelect": "multi",
+                	 bLengthChange: false,
+                	 'iDisplayLength': 15,
+                	 'ordering':false,
+                     
+           });
+      });
+	</script>
+</head>
+
+<body>
+<div class="PublicHead">
+        <!--顶部左边-->
+        <div class="leftBox">
+            <div class="companyText">
+                    电子商务网站
+            </div>
+        </div>
+        <!--顶部右边-->
+        <div class="RightBox">
+            <div class="UserPhotoBox">
+                <div class="UserPic">
+                    <a href="/user/index"><img src="/image/user.jpg"/></a>
+                </div>
+            </div>
+            <a href="/user/logout">
+                <div class="dropOutBox">
+                    <span >退出</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="PublicDownWhole">
+        <!--内容左边-->
+        <div class="leftBox Js_leftBox">
+            <ul>
+            	<a href="/user/index">
+                    <li class="Select"><i></i><span>商城购物</span></li>
+                </a>
+                <a href="/user/mycarorder"> 
+                    <li><i></i><span>我的购物车</span></li>
+                </a>
+                <a href="/user/finishorder">
+                    <li><i></i><span>已付款订单</span></li>
+                </a>
+            </ul>
+        </div>
+
+        <!--内容右边-->
+        <div class="RightBox Js_RightBox">
+            <div class="PublicContentBox">
+                <!--查询-->
+                <div class="InquireBox">
+                    <div class="InquireleftBox">
+                    </div>
+                    <div class="PublicBtnIcon Color2Btn fl Js_search">
+                        <span>查询商品</span>
+                     </div>
+                </div>
+                
+				<div class = "InquireSelectTable">
+					<span class="message" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></span>
+					<table id="example" class="PublicTableCss" >
+				           <thead>
+				               <tr>
+                                   <th>商品序号</th>
+				                   <th>名称</th>
+				                   <th>发货地</th>
+				                   <th>价格/件</th>
+				                   <th>购买数量(可修改)</th>
+				            	   <th>确定栏</th>
+				               </tr>
+				           </thead>
+				           <tbody>
+				               <tr th:each="product:${productinfo}">
+                                    <form action="/user/addcarorder" method="post">
+				            		<td class = "" th:text="${product.productid}"></td>
+				            		<td class = "" th:text="${product.name}"></td>
+				            		<td class = "" th:text="${product.origin}"></td>
+				            		<td class = "" th:text="${product.price}"></td>
+				            		<td class = ""><input style="text-align: center;" type="text" name="buy_num" value="1"></td>
+                                    <td class = "">
+                                        <input type="text" name="buy_id" 
+                                        th:value="${product.productid}" style="display: none;">
+                                        <input style="padding:5px;background-color:#90EE90;border-radius: 10px;" type="submit" name="tijiao" value="添加至购物车"></td>
+				            		</form>
+				        		</tr>	
+				           </tbody>
+				   </table>
+				   
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主体部分结束 -->
+	
+	
+	<form action="/user/searchproduct" method="post">
+	<div class="PublicFloatBox searchuser">
+        <div class="f_MiddleBox wid400">
+            <div class="f_Head">
+                <span>查找商品</span>
+                <i class="Js_closeBtn iconfont icon-buoumaotubiao20 fr"></i>
+            </div>
+            <div class="f_content">
+            	<div class="f_alonediv">
+                    <div class="f_alone_name">商品序号:</div>
+                    <div class="f_two_input">
+                        <input class="f_p_left_input" value="0" name = "min_id"/>
+                        <span>&nbsp;&nbsp;~&nbsp;&nbsp;</span>
+                        <input class="f_p_right_input" value="100000" name="max_id"/>
+                    </div>
+                </div>
+                <div class="f_alonediv">
+                    <div class="f_alone_name">名称:</div>
+                    <div class="f_alone_input">
+                        <input class="f_p_input" value="%" name="productname"/>
+                    </div>
+                </div>
+                <div class="f_alonediv">
+                    <div class="f_alone_name">发货地:</div>
+                    <div class="f_alone_input">
+                        <input class="f_p_input" value="%" name="origin"/>
+                    </div>
+                </div>
+                <div class="f_alonediv">
+                    <div class="f_alone_name">价格:</div>
+                    <div class="f_two_input">
+                        <input class="f_p_left_input" value="0" name = "min_price"/>
+                        <span>&nbsp;&nbsp;~&nbsp;&nbsp;</span>
+                        <input class="f_p_right_input" value="200" name="max_price"/>
+                    </div>
+                </div>
+                <div class="f_alonediv1">
+                    <div class="f_alone_name">
+                    </div>
+                    <div class="f_alone_input1">
+                        <div class="publicf_btn">
+                            <div class="publicf_btn1 Js_closeBtn"><input type="submit" name="tijiao" value="查询" /></div>
+                            <div class="publicf_btn2 fr Js_closeBtn">取消</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

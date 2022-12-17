@@ -1,0 +1,18 @@
+@charset "UTF-8";
+* {
+    font-size: 14px;
+}
+ul{font-size:0;}
+ul,ol,li{margin:0px; padding:0px; list-style:none; vertical-align:top; }
+img{ border:none; padding:0; margin:0px;font-size:0;}
+body,div,span,p,img,h1,h2,h3,h4,h5,h6,ul,ol,li,em,tr,td,input,label,select{margin:0px;outline:medium none; background:none; padding:0px;font-family:Arial,"微软雅黑";border:0 none;font-style:normal;} 
+a{text-decoration:none;outline:none;font-family:Arial,"微软雅黑";} 
+a:hover{ text-decoration:none;}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+input,select,textarea{background:none; outline:none; -webkit-appearance:none;border:none;}

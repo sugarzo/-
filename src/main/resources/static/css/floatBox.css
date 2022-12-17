@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*浮层*/
+.PublicFloatBox { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.4); z-index: 999; display: none; overflow:auto; -webkit-overflow-scrolling:touch; }
+.kongfx { padding: 50px 0; position: absolute;left: 50%; -webkit-transform: translate(-50%,0%); -moz-transform: translate(-50%,0%); -ms-transform: translate(-50%,0%); -o-transform: translate(-50%,0%); transform: translate(-50%,0%); }
+.f_MiddleBox { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -o-transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); background: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; /* overflow: hidden; */ }
+.f_Head { height: 50px; background: #90EE90; position: relative; color: #fff; padding: 0 10px; line-height: 50px; }
+.f_Head span { font-size: 15px; }
+.f_Head i { font-size: 22px; cursor: pointer; }
+.wid400 { width: 400px; }
+.wid260 { width: 260px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; overflow: hidden; }
+.f_content { background: #fff; padding: 25px 0; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+.f_alonediv { margin: 0 0 25px 0; position: relative; }
+.f_alone_name { text-align: right; width: 80px; display: inline-block; }
+.f_alone_input { display: inline-block; border: 1px solid #ccc; height: 25px; vertical-align: middle; display: inline-block; }
+.d_alonediv { margin: 0 0 0 0; position: relative; }
+.d_alone_name { text-align: right;  height: 25px;width: 90px; display: inline-block; font-size:15px;}
+.d_alone_input {text-align: left;  width: 90px; height: 25px;  display: inline-block; font-size:15px;}
+.f_two_input   {display: inline-block; height: 25px; vertical-align: middle; display: inline-block; }
+.f_two_input span{line-height: 25px; padding: 0px 0px; width: 10px;}
+.f_two_input .f_p_left_input{line-height: 25px; padding: 0px 10px; width: 100px;border: 1px solid #ccc; }
+.f_two_input .f_p_right_input{line-height: 25px; padding: 0px 10px; width: 100px;border: 1px solid #ccc; }
+.f_alone_input1 { display: inline-block; vertical-align: middle; width: 275px; margin: 20px 0 0 0; }
+.selectInput {
+	line-height: 25px;
+	padding: 0px 10px;
+	width: 125px;
+	height: 100%;
+	cursor: pointer;
+	background: url("/../images/tranger.jpg")right;
+	background-repeat: no-repeat;
+}
+.uploadimg { line-height: 25px; width: 275px; }
+.f_p_input { line-height: 25px; padding: 0px 10px; width: 255px; }
+.f_pormat { color: #ff0000; font-size: 12px; position: absolute; bottom: -20px; left: 85px; }
+.f_someText {text-align:center; padding: 0 10px; margin: 0 0 15px 0; }
+.f_someText i, span { vertical-align: middle; }
+.f_someText i { font-size: 22px; }
+.f_someText span { }
+.f_pormatBtn { float: right; }
+.f_pormatBtn1, .f_pormatBtn2 { width: 70px; height: 35px; text-align: center; color: #fff; line-height: 35px; display: inline-block; cursor: pointer; float: left; margin: 0 10px 0 0; }
+.f_pormatBtn1 { background: #fe7844;margin-right:50px;}
+.f_pormatBtn1 input{color: #fff;cursor:pointer;}
+.f_pormatBtn1:hover { background: #ff520f; transition: all ease .3s; }
+.f_pormatBtn2 { background: #a8a8a8; margin-right:30px;}
+.f_pormatBtn2:hover { background: #868686; transition: all ease .3s; }
+.publicf_btn { }
+.publicf_btn1, .publicf_btn2 { width: 70px; height: 35px; text-align: center; color: #fff; line-height: 35px; display: inline-block; cursor: pointer;  }
+.publicf_btn1 input{color: #fff;width: 70px; height: 35px;cursor: pointer;}
+.publicf_btn1 { background: #90EE90; margin-left:-30px;}
+.publicf_btn1:hover { background: #196eec; transition: all ease .3s; }
+.publicf_btn2 { background: #a8a8a8; }
+.publicf_btn2:hover { background: #868686; transition: all ease .3s; }
+.fr { float: right; }
+.fl { float: left; }

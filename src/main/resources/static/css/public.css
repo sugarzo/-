@@ -1,0 +1,69 @@
+body, html { min-width: 1200px; /* height: 100%; */ background: #f1f1f1; }
+.PublicHead { position: fixed; height: 60px; background: #a3edee; padding: 0 2%; width: 96%; z-index: 11; left: 0; }
+.PublicHead .leftBox { line-height: 60px; display: inline-block; float: left; }
+.PublicHead .leftBox > div { display: inline-block; }
+.PublicHead .leftBox i { font-size: 23px; vertical-align: middle; color: #fff; margin: 0 20px; }
+
+.PublicHead .leftBox .companyLogo { width: 98px; height: 40px; background: #fff; margin: 10px 0; float: left; }
+.PublicHead .leftBox .companyLogo img { width: 100%; }
+.PublicHead .leftBox .companyText { font-weight: bold; font-size: 18px; color: #fff; margin: 0 0 0 20px; }
+.PublicHead .RightBox { display: inline-block; float: right;}
+.PublicHead .RightBox .UserPhotoBox { display: inline-block; margin: 6.5px 25px; vertical-align: middle; }
+.PublicHead .RightBox .UserPhotoBox .UserPic { width: 47px; height: 47px; overflow: hidden; border-radius: 50%; display: inline-block; vertical-align: middle; }
+.PublicHead .RightBox .UserPhotoBox .UserPic img { width: 100%; }
+.PublicHead .RightBox .dropOutBox { display: inline-block; vertical-align: middle; cursor: pointer; }
+.PublicHead .RightBox .dropOutBox span { color: #fff; }
+
+.PublicContentBox{margin-top:-20px;}
+.PublicDownWhole { height: 100%; position: relative; padding: 60px 0 0 0; }
+.PublicDownWhole .leftBox { display: inline-block; width: 13%; background: #fff; height: 100%; position: fixed; left: 0; float: left; z-index: 1; }
+.PublicDownWhole .leftBox ul { padding: 11% 0; height: 100%; }
+.PublicDownWhole .leftBox ul li { width: 100%; height: 45px; line-height: 45px; font-size: 15px; color: #000; cursor: pointer; white-space: nowrap; }
+.PublicDownWhole .leftBox ul li i { font-size: 16px; vertical-align: middle; margin: 0 0 0 22%; }
+.PublicDownWhole .leftBox ul li span { vertical-align: middle; margin: 0 0 0 8px; font-size: 15px; }
+.PublicDownWhole .leftBox ul li:hover { background: #86f3e7; transition: all ease .3s; }
+.PublicDownWhole .leftBox ul li:hover i { color: #fff; }
+.PublicDownWhole .leftBox ul li:hover span { color: #fff; }
+.PublicDownWhole .leftBox ul li.Select { background: #90eee6; transition: all ease .3s; }
+.PublicDownWhole .leftBox ul li.Select i { color: #fff; }
+.PublicDownWhole .leftBox ul li.Select span { color: #fff; }
+
+.PublicDownWhole .RightBox { display: inline-block; position: relative; left: 13%; background: #f1f1f1; height: 100%; width: 83%; float: left; padding: 2%; vertical-align: top; }
+
+/*�Ҳ���ӹ�����ʽ*/
+.PublicPointToAgeText { padding: 0 0 2% 0; /* background: #f1f1f1; */ font-weight: bold; }
+.PublicPointToAgeText span { color: #000; font-size: 15px; }
+.PublicPointToAgeText .span1 { margin: 0 10px 0 0; }
+.PublicPointToAgeText .span2 { }
+
+.InquireBox { height: 45px; background: #fff; width: 100%; margin: 0 0 0 0; }
+.InquireBox .InquireleftBox { display: inline-block; float: left; margin: 9px; }
+.InquireBox .InquireleftBox .selectAttribute { color: #000; display: inline-block; vertical-align: middle; }
+.InquireBox .InquireleftBox .InputDiv { display: inline-block; border: 1px solid #ccc; height: 25px; vertical-align: middle; position: relative; }
+.InquireBox .InquireleftBox .InputDiv i { position: absolute; top: 50%; right: 10px; -webkit-transform: translate(0,-50%); -moz-transform: translate(0,-50%); -ms-transform: translate(0,-50%); -o-transform: translate(0,-50%); transform: translate(0,-50%); font-size: 14px; }
+.InquireBox .InquireleftBox .InputDiv .phoneInput { line-height: 25px; padding: 0px 10px; width: 190px; height: 100%; }
+.InquireBox .InquireleftBox .InputDiv .phoneInput::-webkit-input-placeholder { color: #ccc; }
+.PublicBtnIcon { display: inline-block; color: #fff; padding: 3px 10px; margin: 10px; cursor: pointer; }
+.PublicBtnIcon span { vertical-align: middle; }
+.fr { float: right; }
+.fl { float: left; }
+
+.hidden_tr {display: none; overflow:auto; -webkit-overflow-scrolling:touch; }
+/*��ʾ��Ϣ*/
+.message
+{
+	position:fixed;
+	top:60px;
+	left:45%;
+	z-index:900;
+	height:28px;
+	width:10%;
+	background: #ff363d;
+	font-size: 14px;
+	ertical-align: middle;
+	text-align:center;
+	color:white;
+	border: 1px;
+	border-radius:3px;
+}
+

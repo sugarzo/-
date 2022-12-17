@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.InquireSelectTable {
+	margin: 20px 10px 0 10px;
+	overflow: auto;
+}
+
+.PublicTableCss {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ccc;
+}
+
+.PublicTableCss thead {
+	background-color: #c5f8ee;
+}
+
+.PublicTableCss thead tr {
+}
+
+.PublicTableCss thead tr td {
+	max-width: 135px;
+	padding: 10px 15px;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+	white-space: nowrap;
+}
+
+.PublicTableCss thead tr td::before {
+	position: absolute;
+	content: "";
+	right: 0.5px;
+	top: 50%;
+	width: 1px;
+	height: 70%;
+	background: #c2f1e4;
+}
+
+.PublicTableCss thead tr td:last-child::before {
+	display: none;
+}
+
+.PublicTableCss tbody {
+}
+
+.PublicTableCss tbody tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.PublicTableCss tbody tr:hover {
+	background: #f3f3f3;
+	transition: all ease .3s;
+}
+
+.PublicTableCss tbody tr td {
+	max-width: 400px;
+	padding: 5px 15px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.PublicTableCss tbody tr td::before {
+	position: absolute;
+	content: "";
+	right: 0.5px;
+	top: 50%;
+	width: 1px;
+	height: 70%;
+	background: #ccc;
+	-webkit-transform: translate(0%,-50%);
+	-moz-transform: translate(0%,-50%);
+	-ms-transform: translate(0%,-50%);
+	-o-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+}
+
+.PublicTableCss tbody tr td:last-child::before {
+	display: none;
+}
+
+.PublicTableCss tbody tr td .productImgBox {
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.PublicTableCss tbody tr td .productImgBox img {
+	width: 100%;
+}
+
+.PublicTableBtnIcon {
+	display: inline-block;
+	color: #fff;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+
+.PublicTableBtnIcon i {
+	vertical-align: middle;
+}
+
+.PublicTableBtnIcon span {
+	vertical-align: middle;
+}
+
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    -webkit-appearance:none;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    outline: none;
+}
+input[type=checkbox]:checked{
+   background: url("/../images/checkbox_16.jpg")center;
+   background-repeat:no-repeat;
+}

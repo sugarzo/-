@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.Color1Btn { background: #fd4c4c; }
+.Color1Btn:hover { background: #ff0000; transition: all ease .3s; }
+.Color2Btn { background: #d7ce7f; }
+.Color2Btn:hover { background: #196eec; transition: all ease .3s; }
+.Color4Btn { background: #fe7844; }
+.Color4Btn:hover { background: #ff520f; transition: all ease .3s; }
+.Color5Btn { background: #fe7844; }
+.Color5Btn:hover { background: #fd5b1c; transition: all ease .3s; }
+.select_input { line-height: 25px; padding: 0px 10px; width: 190px; height: 100%; }
+.phoneInput::-webkit-input-placeholder { color: #ccc; }

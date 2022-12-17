@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>电子商务网站</title>
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+	<div style="top: 10%">
+		<h4 style="font-size: 50px;color:#196eec;">电子商务网站</h4>
+	</div>
+    <div class="loginform">
+        <form action="/shop/login_check" method="post">
+            <p style="font-size: 25px;font-weight: 500;padding: 20px;">登录页面</p>
+            <p style="color: #196eec;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+            <p class="text">账号：
+                <input type="text" name="userid" placeholder="请输入用户名"></p>
+            <p class="text">密码：
+                <input type="password" name="password" placeholder="请输入密码"></p>
+            <p><a href="/shop/register" style="color: blue">去注册</a></p>
+            <input class="login-button" type="submit" value="登录">
+
+        </form>
+    </div>
+</body>

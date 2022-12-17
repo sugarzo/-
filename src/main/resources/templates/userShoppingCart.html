@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>电子商务网站</title>
+	<!--引入css-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+ 	<link rel="stylesheet" href="/css/reset.css">
+ 	<link rel="stylesheet" href="/css/table.css">
+ 	<link rel="stylesheet" href="/css/public.css">
+ 	<link rel="stylesheet" href="/css/btn.css">
+ 	<link rel="stylesheet" href="/css/floatBox.css">
+ 	<script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/jquery.qrcode.min.js"></script>
+    <script src="/js/user.js"></script>
+	<!--引入JavaScript-->
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+	<!--初始化代码-->
+	<script>
+     $(document).ready(function() {
+           $('#example').DataTable({
+        	     "bFilter": false, 
+                 "pagingType":   "simple",
+                	 "sRowSelect": "multi",
+                	 bLengthChange: false,
+                	 'iDisplayLength': 15,
+                	 'ordering':false,
+                     
+           });
+      });
+	</script>
+</head>
+
+<body>
+<div class="PublicHead">
+        <!--顶部左边-->
+        <div class="leftBox">
+            <div class="companyText">
+                    电子商务网站
+            </div>
+        </div>
+        <!--顶部右边-->
+        <div class="RightBox">
+            <div class="UserPhotoBox">
+                <div class="UserPic">
+                    <a href="/user/index"><img src="/image/user.jpg"/></a>
+                </div>
+            </div>
+            <a href="/user/logout">
+                <div class="dropOutBox">
+                    <span >退出</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="PublicDownWhole">
+        <!--内容左边-->
+        <div class="leftBox Js_leftBox">
+            <ul>
+            	<a href="/user/index">
+                    <li><i></i><span>商城购物</span></li>
+                </a>
+                <a href="/user/mycarorder"> 
+                    <li class="Select"><i></i><span>我的购物车</span></li>
+                </a>
+                <a href="/user/finishorder">
+                    <li><i></i><span>已付款订单</span></li>
+                </a>
+            </ul>
+        </div>
+
+        <!--内容右边-->
+        <div class="RightBox Js_RightBox">
+            <div class="PublicContentBox">
+                <!--查询-->
+                <div class="InquireBox">
+                    <div class="InquireleftBox">
+                    </div>
+                    
+                </div>
+                
+				<div class = "InquireSelectTable">
+					<span class="message" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></span>
+					<table id="example" class="PublicTableCss" >
+				           <thead>
+				               <tr>
+                                   <th>订单号</th>
+				                   <th>商品序号</th>
+				                   <th>商品名称</th>
+                                   <th>购买数量</th>
+				                   <th>价格/件</th>
+                                   <th>总价/元</th>
+				            	   <th>删除</th>
+                                   <th>付款</th>
+				               </tr>
+				           </thead>
+				           <tbody>
+				               <tr th:each="order:${orders}">
+                                    <form action="/user/checkcarorder" method="post">
+				            		<td class = "" th:text="${order.orderid}"></td>
+				            		<td class = "" th:text="${order.productid}"></td>
+				            		<td class = "" th:text="${order.name}"></td>
+				            		<td class = "" th:text="${order.buynum}"></td>
+                                    <td class = "" th:text="${order.price}"></td>
+                                    <td class = "" th:text="${order.allprice}"></td>
+                                    <td class = "">
+                                        <input type="text" name="order_id" 
+                                        th:value="${order.orderid}" style="display: none;">
+                                        <input style="padding:5px;background-color:#90EE90;border-radius: 10px;" type="submit" name="delete" value="删除"></td>
+                                    <td class = "">
+                                        
+                                        <input style="padding:5px;background-color:#90EE90;border-radius: 10px;" type="submit" name="fukuan" value="付款"></td>
+				            		</form>
+				        		</tr>	
+				           </tbody>
+				   </table>
+				   
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主体部分结束 -->
+    
+</body>
+</html>
